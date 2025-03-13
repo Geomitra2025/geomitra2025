@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GEOMITRA Login/Register</title>
+
+    <link rel="stylesheet" href="LOGIN.CSS">
+
+</head>
+
+<body>
+
+    <div class="container" id="loginContainer">
+
+
+        <h1>GEOMITRA 2025</h1>
+
+        <h2>ELECTRICAL AND ELECTRONICS ENGINEERING</h2>
+
+
+        <div class="login-box">
+
+            <label for="username">Collage Email</label>
+
+            <input type="text" id="username" placeholder="Enter username">
+
+            <label for="password">PASSWORD</label>
+
+            <input type="password" id="password" placeholder="Enter password">
+
+            <button onclick="login()">Login</button>
+
+            <div class="links-container">
+
+                <p>Don't have an account? <a href="#" onclick="showRegister()">Register</a></p>
+
+                <p><a href="#" onclick="showForgotPassword()">Forgot Password?</a></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="container" id="registerContainer" style="display:none;">
+
+        <button class="top-back-arrow" onclick="showLogin()">←</button>
+    
+        <h1>GEOMITRA 2025</h1>
+    
+        <h2>ELECTRICAL AND ELECTRONICS ENGINEERING</h2>
+    
+        <div class="login-box">
+    
+            <label for="regName">NAME</label>
+            <input type="text" id="regName" placeholder="Enter name">
+    
+            <label for="regNumber">NUMBER</label>
+            <input type="text" id="regNumber" placeholder="Enter number">
+    
+            <label for="regUsername">COLLEGE EMAIL ID</label>
+            <input type="text" id="regUsername" placeholder="Enter college email">
+    
+            <label for="regPassword">PASSWORD</label>
+            <input type="password" id="regPassword" placeholder="Enter password">
+    
+            <button onclick="register()">Register</button>
+    
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+    
+        </div>
+    
+    </div>
+    
+
+    <div class="container" id="forgotPasswordContainer" style="display:none;">
+        <!-- Always visible Back Arrow at the top-left -->
+        <button class="top-back-arrow" onclick="showLogin()">←</button>
+    
+        <h1>GEOMITRA 2025</h1>
+        <h2>ELECTRICAL AND ELECTRONICS ENGINEERING</h2>
+    
+        <div class="login-box">
+            <label for="forgotNumber">Enter Mobile Number</label>
+            <input type="text" id="forgotNumber" placeholder="Enter your mobile number">
+            <button onclick="forgotPassword()">Submit</button>
+            <p id="recoveryDetails" style="display:none;"></p>
+    
+            <!-- Second back button (hidden initially) -->
+            <button class="back-btn" id="backButton" onclick="showLogin()" style="display:none;">← Back</button>
+        </div>
+    </div>
+    
+    <script src="LOGIN.JS"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geomitra 2025 Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <!-- Top Orange Header -->
+    <div class="header">
+        WELCOME TO GEOMITRA 2025
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">×</button>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">settings</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
+ 
+    
+    <div class="header">
+        <span class="header-title">WELCOME TO GEOMITRA 2025</span>
+        <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+    </div>
+    
+    <div class="content">
+        <p>Welcome to your dashboard. Manage your settings and explore features.</p>
+    </div>
+    <div id="profilePopup" class="popup">
+        <div class="popup-content">
+            <button class="close-btn" onclick="closeProfilePopup()">×</button>
+            <h2>Profile</h2>
+            <div class="profile-card">
+                <div class="profile-logo" id="profileLogo"></div>
+                <h2 id="profileName"></h2>
+                <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+                <p><strong>Mobile:</strong> <span id="profileNumber"></span></p>
+                <p><strong>Password:</strong> 
+                    <span id="profilePassword">***</span>
+                    <button class="eye-btn" onclick="togglePassword()">👁</button>
+                    <button class="change-password-btn" onclick="openPasswordChange()">Change</button>
+                </p>
+                <button class="logout-btn" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+    <script src="DASHBOARD.JS"></script>
+</body>
+
+</html>

@@ -1,0 +1,211 @@
+/* Reset and General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('BACKGROUND.JPG') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Top Orange Header */
+.header {
+    display: flex;
+    justify-content: space-between;  /* Keeps text on the left and button on the right */
+    align-items: center;  /* Vertically centers items */
+    background-color: orange;
+    color: white;
+    padding: 15px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+/* Ensures text doesn't push menu button out */
+.header span {
+    flex-grow: 1;
+    text-align: left;  /* Keeps the text aligned to the left */
+}
+
+
+/* Ensure the text doesn't push the button out */
+.header span {
+    flex-grow: 1;  /* Allows text to take up space but not push the menu out */
+    text-align: center;
+}
+/* Sidebar - Right Side */
+.sidebar {
+    height: 100%;
+    width: 150px; /* Compact width */
+    position: fixed;
+    top: 0;
+    right: -150px; /* Initially hidden */
+    background-color: white; /* White background */
+    padding-top: 40px;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 2000; /* Ensures it stays on top */
+}
+
+/* Push Content When Sidebar Opens */
+body.sidebar-open {
+    overflow: hidden; /* Prevents background scrolling */
+}
+
+/* Sidebar Heading */
+.sidebar h2 {
+    color: black; /* Text color */
+    text-align: center;
+    font-size: 14px; /* Smaller font size */
+    margin-bottom: 10px;
+}
+
+/* Sidebar Menu List */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 8px 10px; /* Adjusted spacing */
+    border-bottom: 1px solid #ddd; /* Lighter separator */
+}
+
+.sidebar ul li:last-child {
+    border-bottom: none; /* Remove border for last item */
+}
+
+.sidebar ul li a {
+    color: black; /* Changed text color */
+    text-decoration: none;
+    font-size: 12px; /* Slightly smaller font */
+    display: block;
+}
+
+.sidebar ul li:hover {
+    background-color: #f2f2f2; /* Light gray hover effect */
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 18px;
+    background: none;
+    border: none;
+    color: black; /* Close button color */
+    cursor: pointer;
+}
+
+
+/* Menu Button - Stays at the Right Side */
+.menu-btn {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 3000;
+}
+
+@media (max-width: 768px) { 
+    .header {
+        font-size: 18px;  /* Reduce text size */
+        padding: 10px 15px;
+    }
+    .menu-btn {
+        font-size: 22px;  /* Adjust button size */
+    }
+    .sidebar {
+        width: 180px;  /* Smaller sidebar */
+        right: -180px;
+    }
+}
+
+
+/* Main Content */
+.content {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+
+.profile-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-logo {
+    width: 50px;
+    height: 50px;
+    background: orange;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.eye-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.logout-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.change-password-btn {
+    margin-left: 10px;
+    background: #f1c40f;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* Profile Pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
